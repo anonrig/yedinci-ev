@@ -38,15 +38,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-  .state('tab.feed-detail', {
-    url: '/feed/:feedId',
-    views: {
-      'tab-feed': {
-        templateUrl: 'templates/feed-detail.html',
-        controller: 'FeedDetailController'
-      }
-    }
-  })
   .state('tab.about', {
       url: '/about',
       views: {
@@ -75,7 +66,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-
+  .state('tab.song-detail', {
+    url: '/song/:id',
+    views: {
+      'tab-songs': {
+        templateUrl: 'templates/song-detail.html',
+        controller: 'SongDetailController'
+      }
+    }
+  })
 
   .state('tab.account', {
     url: '/account',

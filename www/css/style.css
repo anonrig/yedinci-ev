@@ -1,6 +1,6 @@
 .bar.bar-header {
   background: rgba(255,255,255,.6) !important;
-  border-bottom-width: 0;
+  border-bottom-width: 0 !important;
 }
 
 .bar.bar-header h1 {
@@ -11,7 +11,7 @@
   overflow: visible !important;
 }
 
-ion-content.has-header {
+ion-content.has-header.has-image{
   top:0px !important;
 }
 
@@ -21,4 +21,12 @@ ion-content.has-header {
 
 .feed-list > .list {
   top: -5px;
+}
+
+.song-photo {
+  width: 100%;
+  height: 300px;
+  background-image: url('../img/kalbim-seni-ariyor.jpg');
+  background-position: center center;
+  background-size: cover;
 }

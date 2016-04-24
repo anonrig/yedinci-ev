@@ -1,0 +1,10 @@
+<ion-view view-title="{{song.title}}" class="has-header">
+  <ion-content>
+    <img class="feed-photo" ng-src="{{song.image}}"/>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" ng-src="{{trustSrc(soundcloud_url)}}"></iframe>
+    <div class="padding">
+      <h4>{{song.title}} - {{song.album}}</h4>
+      <p ng-bind-html="song.lyrics"></p>
+    </div>
+  </ion-content>
+</ion-view>
