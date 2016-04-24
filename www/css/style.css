@@ -11,22 +11,23 @@
   overflow: visible !important;
 }
 
+.platform-ios.platform-cordova:not(.fullscreen) .has-header,
 ion-content.has-header.has-image{
   top:0px !important;
-}
-
-.feed-photo {
-  width: 100%;
 }
 
 .feed-list > .list {
   top: -5px;
 }
 
-.song-photo {
+.song-photo, .feed-photo {
   width: 100%;
   height: 300px;
   background-image: url('../img/kalbim-seni-ariyor.jpg');
   background-position: center center;
   background-size: cover;
+}
+
+.feed-photo.about {
+  background-image: url('../img/group-photo.jpg') !important;
 }

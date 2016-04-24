@@ -104,7 +104,56 @@ angular.module('starter.controllers', [])
   ]
 
 })
-.controller('AboutController', function($scope) {})
+.controller('AboutController', function($scope, $ionicActionSheet) {
+  $scope.showModal = function() {
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: 'iTunes' },
+       { text: 'Spotify' },
+       { text: 'Deezer' },
+       { text: 'TTnet Müzik' },
+       { text: 'Turkcell Müzik' }
+     ],
+     titleText: 'Şarkılarımızı aşağıdaki kaynaklardan indirebilir veya dinleyebilirsiniz.',
+     cancelText: 'İptal',
+     cancel: function() {
+          // add cancel code..
+    },
+     buttonClicked: function(index) {
+       hideSheet();
+       
+       var links = [
+         'http://goo.gl/165O4D',
+         'http://goo.gl/DDhBGi',
+         'http://goo.gl/JhYZWv',
+         'http://goo.gl/OKsbYP',
+         'http://goo.gl/bN1jYt'
+       ]
+
+       var url = links[index];
+
+       SafariViewController.isAvailable(function (available) {
+        if (available) {
+          SafariViewController.show({
+                url: url,
+                hidden: false,
+                animated: false,
+                transition: 'curl',
+                tintColor: "#ff0000"
+              },
+              function(result) {},
+              function(msg) {}
+          )
+        } else {
+          window.open(url, '_blank', 'location=yes');
+        }
+      })
+
+       return true;
+     }
+   });
+  };
+})
 
 
 
