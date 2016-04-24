@@ -1,0 +1,24 @@
+.bar.bar-header {
+  background: rgba(255,255,255,.6) !important;
+  border-bottom-width: 0;
+}
+
+.bar.bar-header h1 {
+  color: black !important;
+}
+
+.scroll-content {
+  overflow: visible !important;
+}
+
+ion-content.has-header {
+  top:0px !important;
+}
+
+.feed-photo {
+  width: 100%;
+}
+
+.feed-list > .list {
+  top: -5px;
+}
